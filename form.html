@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/form.css">
+    <style>
+      body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: slategrey;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-image: url(Programming\ code\ abstract\ technology\ background\ of\ software\ developer\ and\ Computer\ scrip.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav{
+    height: 20vh;
+    width: 100vw;
+    background-image:linear-gradient(green, blue);
+    display: flex;
+}
+.logo{
+    height: 20vh;
+    width: 20vw;
+    background-color: rgb(227, 112, 112);
+}
+.logo h1{
+    font-size: 2rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left:20px ;
+    padding-top:5px ;
+    padding-bottom:5px ;
+    padding-right:5px ;
+}
+.logo p{
+    font-size: 1rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left:20px ;
+    padding-top:5px ;
+    padding-bottom:5px ;
+    padding-right:5px ;
+}
+.navbar{
+    height: 20vh;
+    width: 60vw;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+.navbar a{
+    text-decoration: none;
+    padding: 0;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+
+}
+.navbar a:hover{
+    color: greenyellow;
+}
+
+.icon{
+    height: 20vh;
+    width: 20vw;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.icon img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.icon button{
+    color: rgb(176, 49, 49);
+    height: 40px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+.icon button a{
+    text-decoration: none;
+    font-size: 1rem;
+}
+.icon button:hover{
+    background-color: greenyellow;
+    color: black;
+}
+.main-content{
+    height: 80vh;
+    width: 100vw;
+    background-image: linear-gradient(white, #0012);
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-content .box{
+    height: 400px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input[type="text"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .toggle-password {
+    background-color: #ccc;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  .visible-password {
+    display: none;
+  }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <h1>ict club </h1>
+                <p>nsagi ss</p>
+            </div>
+            <div class="navbar">
+              
+                    <a href="about">ABOUT</a>
+           
+            <a href="about">SERVICES</a>
+            <a href="about">MORE...</a>
+            </div>
+            <div class="icon">
+                <img src="Ict stock illustration_ Illustration of online, email - 6930376.jpg" alt="">
+                <button type="submit"><a href="form.hmtl">sign up</a></button>
+                <button type="submit">Sign in</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="box">
+                    <div class="container">
+                        <h2>Password Form</h2>
+                        <form action="/submit" method="post">
+                          <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" class="invisible-password" required>
+                            <input type="text" id="visible-password" class="visible-password" aria-hidden="true" tabindex="-1">
+                            <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Show Password</button>
+                          </div>
+                          <button type="submit">Submit</button>
+                        </form>
+                      </div>
+            
+            
+               
+            </div>
+
+        </div>
+        <div class="footer"></div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+          var passwordInput = document.getElementById("password");
+          var visiblePasswordInput = document.getElementById("visible-password");
+        
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            visiblePasswordInput.value = passwordInput.value;
+            visiblePasswordInput.style.display = "block";
+            document.querySelector('.toggle-password').textContent = 'Hide Password';
+          } else {
+            passwordInput.type = "password";
+            visiblePasswordInput.style.display = "none";
+            document.querySelector('.toggle-password').textContent = 'Show Password';
+          }
+        }
+        </script>
+        
+</body>
+
+</html>
